@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <script type="text/javascript">
+
+        document.write("Доп задание <br/>");
+        var arr = [1, 2, 3, 4, 4, 8, 9, 10, 11, 11];
+        document.write(arr.reverse());
+        document.write("<hr/><br/>");
+        document.write("Задание 2 <br/>");
+        
+        var maxValue, minValue;
+        var sum = 0, avg;
+
+        maxValue = Math.max.apply(null, arr);
+        document.write("Наибольшее значение массива: " + maxValue + "<br/>");
+
+        minValue = Math.min.apply(null, arr);        
+        document.write("Наименьшее значение массива: " + minValue + "<br/>");
+
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        document.write("Общая сумма элементов: " + sum + "<br/>");
+
+        avg = sum / arr.length;
+        document.write("Среднее арифметическое всех элементов: " + avg + "<br/>");
+
+        document.write("Нечетные значения массива: ");
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0){
+                document.write(arr[i] + " ");
+            }
+        }
+        
+        document.write("<hr/><br/>");
+        document.write("Задание 3 <br/>");
+        var matrix = Array(5);
+        document.writeln("Исходный массив: <br/>");
+        document.writeln("<table>");
+        for (var i = 0; i < matrix.length; i++) {
+            matrix[i] = Array(5);
+            document.writeln("<tr>");
+            for (var j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = Math.round((Math.random() * 100 - 50));
+                document.writeln("<td>&nbsp&nbsp" + matrix[i][j] + "</td>");
+            }
+            document.write("<br/>");
+            document.writeln("</tr>");
+        }
+        document.writeln("</table>");
+        document.writeln("<br/>Массив с измененными числами на главной диагонали: <br/>");
+
+        document.writeln("<table>");
+        for (var i = 0; i < matrix.length; i++) {
+            document.writeln("<tr>");
+            for (var j = 0; j < matrix[i].length; j++) {
+                if ((i==j)) {
+                    if (matrix[i][j] < 0) {
+                        matrix[i][j] = 0;
+                    }
+                    else {
+                        matrix[i][j] = 1;                       
+                    }
+                }
+                document.writeln("<td>&nbsp&nbsp" + matrix[i][j] + "</td>");
+            }
+            document.write("<br/>");
+            document.writeln("</tr>");
+        }
+        document.writeln("</table>");
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
