@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function SomeFunction(a) {
+            document.write("Вы ввели число: " + a + "<br/>");
+
+            document.write("Введенное значение: ");
+            if (a < 0) {
+                document.write("отрицательное");
+            }
+            else {
+                document.write("положительное");
+            }
+            document.write("<br/>");
+
+            var isSimple = true;
+            for (var i = 2; i < a; i++) {
+                if (a % i == 0) {
+                    isSimple = false;
+                }
+            }
+            document.write("Число простое?: " + isSimple);
+
+            document.write("<br/>");
+            var arr = [2, 5, 3, 6, 9];
+            document.write("Проверка делится ли число на следующие числа:<br/>");
+            document.write(arr.join("&nbsp&nbsp&nbsp&nbsp") + "<br/>");
+
+            for (var i = 0; i < arr.length; i++) {
+                if(a % arr[i] == 0){
+                    document.write("Yes");
+                } else {
+                    document.write("No");
+                }
+            }
+
+        }
+        
+        var number = +prompt("Введите число:");
+        SomeFunction(number);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

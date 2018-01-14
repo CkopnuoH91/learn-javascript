@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        document.write("Задание 2" + "<br/>");
+        var x = 6;
+        var y = 15;
+        var z = 4;
+
+        document.write("Начальное значение переменных:" + "<br/>");
+        document.write("x = " + x + "<br/>");
+        document.write("y = " + x + "<br/>");
+        document.write("z = " + x + "<br/>");
+
+        document.write("Результаты вычислений:" + "<br/>");
+        x += y - x++ * z;
+        document.write("x = " + x + "<br/>");
+        z = --x - y * 5;
+        document.write("z = " + z + "<br/>");
+        y /= x + 5 % z;
+        document.write("y = " + y + "<br/>");
+        z = x++ + y * 5;
+        document.write("z = " + z + "<br/>");
+        x = y - x++ * z;
+        document.write("x = " + x + "<br/>");
+
+        document.write("Задание 3" + "<br/>");
+        var firstValue = +prompt("Введите первое число: ");
+        var secondValue = +prompt("Введите второе число: ");
+        var thirdValue = +prompt("Введите третье число: ");
+
+        var avg = (firstValue + secondValue + thirdValue) / 3;
+        document.write("Среднее арифметическое " + firstValue + " " + secondValue + " " + thirdValue + " равно: " + avg + "<br/>");
+
+        document.write("Задание 4" + "<br/>");
+        var PI = 3.14;
+        var r = +prompt("Введите радиус r: ");
+        var h = +prompt("Введите высоту h: ");
+        var V = PI * r * r * h;
+        var S = 2 * PI * r * (r + h);
+
+        document.write("r=" + r + " h=" + h + " PI=" + PI + " <br/>");
+        document.write("V=" + V + " S=" + S + " <br/>");    
+    </script>
+</head>
+<body>
+</body>
+</html>

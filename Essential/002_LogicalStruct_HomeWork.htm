@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        document.write("Доп задание");
+        document.write("");
+
+        var a = 6, b = 8;
+        for (var i = 0; i < a; i++) {
+            for (var j = 0; j < b; j++) {
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        document.write("");
+
+        document.write("Задание 2 <br/>");
+        var A = 1, B = 17;
+        var sum = 0;
+        document.write("Нечетные числа между А=" + A + " и В=" + B + "<br/>");
+        for (var i = A + 1; i < B; i++) {
+            if (i % 2 == 1) {
+                document.write(" " + i );
+            }            
+            sum += i;
+        }
+        document.write("<br/>");
+        document.write("Сумма чисел между А=" + A + " и В=" + B + " равна: " + sum);
+        document.write("<br/>");
+        document.write("");
+
+        document.write("Задание 3 <br/>");
+        var n = prompt("Введите число доставок:");
+        var numberDelivery = 1;
+        do {
+            if (n == 0) {
+                // Нет возможных вариантов доставки, значит никакими способами доставить товар нельзя.
+                numberDelivery = 0;
+                break;
+            }
+            numberDelivery = numberDelivery * n;
+            n--;
+        } while (n > 0);
+        document.write("Число возможных вариантов доставки торава: " + numberDelivery + " <br/>");
+        document.write("");
+
+        document.write("Задание 4 <br/>");
+        var l = 8, h = 6;
+        document.write("Прямоугольник: <br/>");
+        for (var i = 0; i < l; i++) {
+            for (var j = 0; j < h; j++) {
+                document.write("*&nbsp");
+            }
+            document.write("<br/>");
+        }
+
+        document.write("Прямоугольный треугольник: <br/>");
+        h = 1;
+        for (var i = 0; i < l; i++) {
+            for (var j = 0; j < h; j++) {
+                document.write("*&nbsp");
+            }
+            document.write("<br/>");
+            h++;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
